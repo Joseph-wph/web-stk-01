@@ -20,8 +20,8 @@ export default function Footer() {
           </div>
 
           {/* Tengah */}
-          <nav className="flex justify-around">
-            <ul className="flex gap-10 lg:gap-20 items-center">
+          <nav className="flex justify-center">
+            <ul className="flex gap-5 lg:gap-20 items-center">
               <li className="hover:text-blue-500 font-bold cursor-pointer">
                 <a href="#home">Home</a>
               </li>

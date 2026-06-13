@@ -26,15 +26,15 @@ export default function Testimonial() {
   }, [api]);
 
   return (
-    <section className="w-full py-10 bg-tertiary">
+    <section className="w-full py-10 overflow-x-hidden">
       <div className="w-full mx-auto px-5">
         {/* Carousel */}
         <Carousel className="w-full" setApi={setApi}>
-          <CarouselContent className="ml-0 lg:-ml-4">
+          <CarouselContent>
             {testimonials.map((item, index) => (
               <CarouselItem
                 key={index}
-                className="min-w-0 basis-full lg:basis-1/3 lg:pl-4 flex justify-center"
+                className="shrink-0 basis-full lg:basis-1/3 flex justify-center"
               >
                 <TestimonialCard {...item} />
               </CarouselItem>
