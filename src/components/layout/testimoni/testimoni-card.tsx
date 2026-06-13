@@ -12,7 +12,7 @@ export default function TestimonialCard({
   image,
 }: TestimonialCardProps) {
   return (
-    <div className="w-full max-w-[350px] lg:max-w-[450px] border-[3px] border-primary rounded-3xl p-5 bg-white h-full flex flex-col items-center justify-center">
+    <div className="w-full max-w-[300px] lg:max-w-[450px] border-[3px] border-primary rounded-3xl p-5 bg-white h-full flex flex-col items-center justify-center">
       {/* Stars */}
       <div className="flex gap-1 text-yellow-400 text-lg mb-4">★★★★★</div>
 

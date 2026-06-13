@@ -72,7 +72,7 @@ export default function ContactForm() {
   };
 
   return (
-    <section className="w-full py-16">
+    <section className="w-full mx-auto py-16 px-5">
       <div className="lg:w-3xl w-sm mx-auto px-5">
         <form onSubmit={handleSubmit} className="flex flex-col gap-8">
           {/* Name */}
