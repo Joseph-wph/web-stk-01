@@ -10,7 +10,7 @@ export default function Footer() {
             <img
               src="/assets/logo/logoSTKWhite.png"
               alt="Sena Tama Konsultindo"
-              className="w-[200px] lg:w-[280px]"
+              className="w-50 lg:w-70"
             />
 
             <p className="w-80 text-left text-[14px]">
@@ -41,9 +41,9 @@ export default function Footer() {
           </nav>
 
           {/* Kanan */}
-          <div className="flex flex-col gap-4 lg:items-end">
+          <div className="flex flex-col gap-4 lg:items-start lg:justify-self-end">
             {/* Title */}
-            <h2 className="text-[18px] font-light">Contact Us :</h2>
+            <h2 className="text-[18px] font-bold">Contact Us :</h2>
 
             {/* Email */}
             <div className="flex items-start gap-5">

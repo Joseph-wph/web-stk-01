@@ -37,10 +37,14 @@ export default function Navbar() {
           </ul>
         </nav>
 
-        {/* Desktop Button */}
-        <button className="hidden lg:block bg-primary hover:bg-blue-700 px-6 py-2 text-white rounded-full font-medium cursor-pointer">
+        <a
+          href="https://wa.me/6281807597477?text=Hello%20Sena%20Tama%20Konsultindo,%20I%20would%20like%20to%20ask%20about%20your%20services."
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hidden lg:block bg-primary hover:bg-blue-700 px-6 py-2 text-white rounded-full font-medium cursor-pointer"
+        >
           Contact Us
-        </button>
+        </a>
 
         {/* Burger Button */}
         <button
@@ -69,9 +73,14 @@ export default function Navbar() {
             </li>
           </ul>
 
-          <button className="mt-6 w-full bg-primary hover:bg-blue-700 text-white py-3 rounded-full">
+          <a
+            href="https://wa.me/6281807597477?text=Hello%20Sena%20Tama%20Konsultindo,%20I%20would%20like%20to%20ask%20about%20your%20services."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-6 block w-full bg-primary hover:bg-blue-700 text-white py-3 rounded-full text-center"
+          >
             Contact Us
-          </button>
+          </a>
         </div>
       )}
     </header>

@@ -1,6 +1,7 @@
 export default function Hero() {
   return (
-    <section id="home"
+    <section
+      id="home"
       className="relative min-h-screen bg-cover bg-center"
       style={{
         backgroundImage: "url('/assets/image/heroSection.png')",
@@ -22,9 +23,14 @@ export default function Hero() {
               legal consulting, and corporate compliance.
             </p>
 
-            <button className="bg-primary hover:bg-blue-700 px-6 py-2 text-white rounded-full font-medium cursor-pointer w-fit">
+            <a
+              href="https://wa.me/6281807597477?text=Hello%20Sena%20Tama%20Konsultindo,%20I%20would%20like%20to%20ask%20about%20your%20services."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-primary hover:bg-blue-700 px-6 py-2 text-white rounded-full font-medium cursor-pointer w-fit"
+            >
               Contact Us
-            </button>
+            </a>
           </div>
         </div>
       </div>
