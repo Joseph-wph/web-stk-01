@@ -1,4 +1,12 @@
 export default function Hero() {
+  const phoneNumber = "6281807597477";
+
+  const message =
+    "Hello Optimal Tax Solutions, I would like to ask about your services.";
+
+  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+    message,
+  )}`;
   return (
     <section
       id="home"
@@ -24,7 +32,7 @@ export default function Hero() {
             </p>
 
             <a
-              href="https://wa.me/6281807597477?text=Hello%20Sena%20Tama%20Konsultindo,%20I%20would%20like%20to%20ask%20about%20your%20services."
+              href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="bg-primary hover:bg-blue-700 px-6 py-2 text-white rounded-full font-medium cursor-pointer w-fit"
