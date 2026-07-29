@@ -9,7 +9,7 @@ export default function Navbar() {
   const phoneNumber = "6281807597477";
 
   const message =
-    "Hello Optimal Tax Solutions, I would like to ask about your services.";
+    "Hello Sena Tama Konsultindo, I would like to ask about your services.";
 
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
     message,

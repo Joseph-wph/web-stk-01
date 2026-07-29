@@ -1,8 +1,8 @@
 export default function Hero() {
-  const phoneNumber = "6281807597477";
+  const phoneNumber = "6281283807770";
 
   const message =
-    "Hello Optimal Tax Solutions, I would like to ask about your services.";
+    "Hello Sena Tama Konsultindo, I would like to ask about your services.";
 
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
     message,
