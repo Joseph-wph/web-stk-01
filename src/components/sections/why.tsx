@@ -29,50 +29,59 @@ const why = [
 
 export default function Why() {
   return (
-    <section className="w-full mx-auto lg:px-20 py-6 lg:py-10 flex items-center justify-center">
-      <div className="flex flex-col lg:flex-row justify-center items-center gap-10">
-        {/* Image */}
-        <div className="w-screen lg:w-200 lg:h-auto lg:rounded-4xl h-62 object-cover order-2 lg:order-1">
-          <img src="/assets/image/meetingRoom.jpg" alt="Meeting Room" />
-        </div>
-
-        {/* Text */}
-        <div className="flex flex-col justify-center lg:items-start items-center gap-10 px-5 order-1 lg:order-2">
-          <div className="flex flex-col justify-center items-center lg:items-start gap-5">
-            <p className="text-[16px] font-semibold text-secondary">
-              Why Choose Us
-            </p>
-            <h1 className="font-heading font-bold text-3xl text-primary">
-              Your Tusted Partner
-              <br />
-              for Business Success
-            </h1>
+    <section className="w-full py-10 lg:py-20">
+      <div className="max-w-7xl mx-auto px-5 lg:px-10">
+        <div className="flex flex-col lg:flex-row items-center gap-12">
+          {/* Image */}
+          <div className="order-2 lg:order-1 w-full lg:w-1/2 overflow-hidden rounded-xl lg:rounded-4xl">
+            <img
+              src="/assets/image/meetingRoom.jpg"
+              alt="Meeting Room"
+              className="w-full h-64 md:h-80 lg:h-[550px] lg:w-[750px] object-cover"
+            />
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-            {why.map((item, index) => {
-              const Icon = item.icon;
+          {/* Text */}
+          <div className="order-1 lg:order-2 w-full lg:w-1/2 flex flex-col items-center lg:items-start gap-10">
+            {/* Heading */}
+            <div className="flex flex-col items-center lg:items-start gap-4 text-center lg:text-left">
+              <p className="text-base font-semibold text-secondary">
+                Why Choose Us
+              </p>
 
-              return (
-                <div key={index} className="flex items-start gap-5">
-                  {/* Icon */}
-                  <div className="flex items-center justify-center w-14 h-14 rounded-full bg-primary shrink-0">
-                    <Icon className="w-7 h-7 text-white" />
+              <h2 className="font-heading font-bold text-3xl lg:text-5xl text-primary leading-tight">
+                Your Trusted Partner
+                <br />
+                for Business Success
+              </h2>
+            </div>
+
+            {/* Features */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 w-full">
+              {why.map((item, index) => {
+                const Icon = item.icon;
+
+                return (
+                  <div key={index} className="flex items-start gap-4">
+                    {/* Icon */}
+                    <div className="flex items-center justify-center w-14 h-14 rounded-full bg-primary shrink-0">
+                      <Icon className="w-7 h-7 text-white" />
+                    </div>
+
+                    {/* Text */}
+                    <div>
+                      <h3 className="font-open text-lg font-bold text-black mb-2">
+                        {item.title}
+                      </h3>
+
+                      <p className="text-sm leading-relaxed text-gray-500 font-open-sans">
+                        {item.description}
+                      </p>
+                    </div>
                   </div>
-
-                  {/* Text */}
-                  <div className="flex flex-col">
-                    <h3 className="font-open text-lg font-bold text-black">
-                      {item.title}
-                    </h3>
-
-                    <p className="text-gray-500 font-open-sans font-medium text-sm leading-relaxed">
-                      {item.description}
-                    </p>
-                  </div>
-                </div>
-              );
-            })}
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>

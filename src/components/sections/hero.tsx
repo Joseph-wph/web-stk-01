@@ -16,29 +16,37 @@ export default function Hero() {
       }}
     >
       {/* Overlay */}
-      <div className="absolute bottom-0 left-0 w-full lg:h-47 h-100 bg-linear-to-t from-black to-transparent lg:bg-black/50"></div>
+      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
 
       {/* Content */}
-      <div className="relative z-10 w-full h-screen flex items-end lg:px-20 px-5 py-10">
-        <div className="flex flex-col lg:flex-row lg:items-end justify-start gap-5 text-white w-full">
-          <h1 className="lg:text-6xl text-4xl font-heading font-bold max-w-2xl">
-            Smart Solutions, Trusted Knowledge
-          </h1>
+      <div className="relative z-10 min-h-screen flex items-end">
+        <div className="max-w-7xl mx-auto w-full px-5 lg:px-10 pb-10 lg:pb-16">
+          <div className="grid grid-cols-1 lg:grid-cols-[1.5fr_1fr] xl:grid-cols-[1.7fr_1fr] gap-8 xl:gap-16 items-end">
+            {/* Left */}
+            <div>
+              <h1 className="font-heading font-bold text-white text-4xl md:text-5xl xl:text-7xl leading-tight">
+                Smart Solutions,
+                <br />
+                Trusted Knowledge
+              </h1>
+            </div>
 
-          <div className="flex flex-col justify-center items-start gap-5">
-            <p className="text-base lg:text-lg max-w-lg">
-              Professional assistance for company establishment, visa services,
-              legal consulting, and corporate compliance.
-            </p>
+            {/* Right */}
+            <div className="flex flex-col items-start gap-6">
+              <p className="text-white text-base lg:text-lg leading-8">
+                Professional assistance for company establishment, visa
+                services, legal consulting, and corporate compliance.
+              </p>
 
-            <a
-              href={whatsappUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-primary hover:bg-blue-700 px-6 py-2 text-white rounded-full font-medium cursor-pointer w-fit"
-            >
-              Contact Us
-            </a>
+              <a
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center bg-primary hover:bg-blue-700 transition-colors px-7 py-3 rounded-full text-white font-medium"
+              >
+                Contact Us
+              </a>
+            </div>
           </div>
         </div>
       </div>

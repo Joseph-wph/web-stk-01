@@ -17,79 +17,117 @@ export default function Navbar() {
 
   return (
     <header className="absolute top-0 left-0 z-50 w-full">
-      <div className="w-full mx-auto px-6 lg:px-20 py-6 lg:py-10 flex items-center justify-between">
-        {/* Logo */}
-        <img
-          src="/assets/logo/logoStk.png"
-          alt="Sena Tama Konsultindo"
-          className="w-50 lg:w-70"
-        />
+      <div className="max-w-7xl mx-auto px-5 lg:px-10">
+        <div className="flex items-center justify-between h-24">
+          {/* Logo */}
+          <a href="#home" className="shrink-0">
+            <img
+              src="/assets/logo/logoStk.png"
+              alt="Sena Tama Konsultindo"
+              className="w-44 xl:w-56"
+            />
+          </a>
 
-        {/* Desktop Menu */}
-        <nav className="hidden lg:block">
-          <ul className="flex gap-20 text-primary">
-            <li className="hover:text-blue-500 font-bold cursor-pointer">
-              <a href="#home">Home</a>
-            </li>
+          {/* Desktop Menu */}
+          <nav className="hidden lg:block">
+            <ul className="flex items-center gap-8 xl:gap-12 text-primary font-semibold">
+              <li>
+                <a
+                  href="#home"
+                  className="hover:text-secondary transition-colors"
+                >
+                  Home
+                </a>
+              </li>
 
-            <li className="hover:text-blue-500 font-bold cursor-pointer">
-              <a href="#about">About</a>
-            </li>
+              <li>
+                <a
+                  href="#about"
+                  className="hover:text-secondary transition-colors"
+                >
+                  About
+                </a>
+              </li>
 
-            <li className="hover:text-blue-500 font-bold cursor-pointer">
-              <a href="#services">Services</a>
-            </li>
+              <li>
+                <a
+                  href="#services"
+                  className="hover:text-secondary transition-colors"
+                >
+                  Services
+                </a>
+              </li>
 
-            <li className="hover:text-blue-500 font-bold cursor-pointer">
-              <a href="#testimonial">Testimoni</a>
-            </li>
-          </ul>
-        </nav>
+              <li>
+                <a
+                  href="#testimonial"
+                  className="hover:text-secondary transition-colors"
+                >
+                  Testimonial
+                </a>
+              </li>
+            </ul>
+          </nav>
 
-        <a
-          href={whatsappUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hidden lg:block bg-primary hover:bg-blue-700 px-6 py-2 text-white rounded-full font-medium cursor-pointer"
-        >
-          Contact Us
-        </a>
-
-        {/* Burger Button */}
-        <button
-          className="lg:hidden text-primary"
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          {isOpen ? <X size={32} /> : <Menu size={32} />}
-        </button>
-      </div>
-
-      {/* Mobile Menu */}
-      {isOpen && (
-        <div className="lg:hidden bg-white px-6 py-6">
-          <ul className="flex flex-col gap-6 text-primary font-bold">
-            <li className="hover:text-blue-300 font-bold cursor-pointer">
-              <a href="#home">Home</a>
-            </li>
-            <li className="hover:text-blue-300 font-bold cursor-pointer">
-              <a href="#about">About</a>
-            </li>
-            <li className="hover:text-blue-300 font-bold cursor-pointer">
-              <a href="#services">Services</a>
-            </li>
-            <li className="hover:text-blue-300 font-bold cursor-pointer">
-              <a href="#testimonial">Testimoni</a>
-            </li>
-          </ul>
-
+          {/* Contact Button */}
           <a
             href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-6 block w-full bg-primary hover:bg-blue-700 text-white py-3 rounded-full text-center"
+            className="hidden lg:inline-flex items-center justify-center shrink-0 bg-primary hover:bg-blue-700 text-white font-medium px-6 py-3 rounded-full transition-colors"
           >
             Contact Us
           </a>
+
+          {/* Mobile Button */}
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="lg:hidden text-primary"
+          >
+            {isOpen ? <X size={32} /> : <Menu size={32} />}
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile Menu */}
+      {isOpen && (
+        <div className="lg:hidden bg-white shadow-lg">
+          <div className="max-w-7xl mx-auto px-5 py-6">
+            <ul className="flex flex-col gap-5 text-primary font-semibold">
+              <li>
+                <a href="#home" onClick={() => setIsOpen(false)}>
+                  Home
+                </a>
+              </li>
+
+              <li>
+                <a href="#about" onClick={() => setIsOpen(false)}>
+                  About
+                </a>
+              </li>
+
+              <li>
+                <a href="#services" onClick={() => setIsOpen(false)}>
+                  Services
+                </a>
+              </li>
+
+              <li>
+                <a href="#testimonial" onClick={() => setIsOpen(false)}>
+                  Testimonial
+                </a>
+              </li>
+            </ul>
+
+            <a
+              href={whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-6 flex items-center justify-center bg-primary hover:bg-blue-700 text-white py-3 rounded-full transition-colors"
+            >
+              Contact Us
+            </a>
+          </div>
         </div>
       )}
     </header>
